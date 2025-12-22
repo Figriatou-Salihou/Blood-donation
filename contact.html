@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Blood Donation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===================== CSS ===================== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+        }
+
+        /* ---------- NAVBAR ---------- */
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            background: linear-gradient(to right, #f5c1c1, #ff2b2b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-left img {
+            width: 45px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 37px;
+            color: black;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+             color: #c40000;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: bold;
+            color: #a60000;
+        }
+
+        /* ---------- CONTACT SECTION ---------- */
+        .contact-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact-section h1 {
+            font-size: 42px;
+            color: #b30000;
+            margin-bottom: 30px;
+        }
+
+        .contact-section p {
+            font-size: 26px;
+            font-weight: bold;
+            max-width: 1100px;
+            margin: auto;
+            line-height: 1.4;
+            color: #000;
+        }
+
+        /* ---------- SOCIAL ICONS ---------- */
+        .social-icons {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-icons img {
+            width: 80px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-left {
+                gap: 20px;
+            }
+
+            .contact-section p {
+                font-size: 18px;
+            }
+
+            .social-icons img {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header>
+    <div class="nav-left">
+        <!--  LOGO IMAGE -->
+        <img src="LOGO.png" alt="Blood Donation Logo">
+
+        <nav>
+            <!-- CONNECTED TO HOME PAGE -->
+            <a href="index.html">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </div>
+
+    <div class="brand">BLOOD <span style="color:black;">DONATION</span></div>
+
+</header>
+
+<!-- ===================== CONTACT CONTENT ===================== -->
+<section class="contact-section">
+    <h1>CONTACT US</h1>
+
+    <p>
+        We’re here to help, answer your questions, and guide you through the blood donation process.
+        Whether you want to donate, organize a donation drive, or simply learn more,
+        feel free to reach out to us anytime.
+    </p>
+
+    <!-- SOCIAL MEDIA ICONS -->
+    <div class="social-icons">
+        <a href="#"><img src="icons.png" alt="Facebook"></a>
+        
+    </div>
+</section>
+
+</body>
+</html>
