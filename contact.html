@@ -2,161 +2,224 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us | Blood Donation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===================== CSS ===================== -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background: #ffffff;
-        }
-
-        /* ---------- NAVBAR ---------- */
-        header {
-            width: 100%;
-            padding: 20px 50px;
-            background: linear-gradient(to right, #f5c1c1, #ff2b2b);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .nav-left img {
-            width: 45px;
-        }
-
-        nav a {
-            text-decoration: none;
-            margin-left: 37px;
-            color: black;
-            font-weight: bold;
-            padding: 10px;
-        }
-
-        nav a:hover {
-             color: white;
-        }
-
-        .brand {
-            font-size: 28px;
-            font-weight: bold;
-            color: #a60000;
-        }
-
-        /* ---------- CONTACT SECTION ---------- */
-        .contact-section {
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .contact-section h1 {
-            font-size: 42px;
-            color: #b30000;
-            margin-bottom: 30px;
-        }
-
-        .contact-section p {
-            font-size: 26px;
-            font-weight: bold;
-            max-width: 1100px;
-            margin: auto;
-            line-height: 1.4;
-            color: #000;
-        }
-
-        /* ---------- SOCIAL ICONS ---------- */
-        .social-icons {
-            margin-top: 60px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .social-icons img {
-            width: 80px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.1);
-        }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-left {
-                gap: 20px;
-            }
-
-            .contact-section p {
-                font-size: 18px;
-            }
-
-            .social-icons img {
-                width: 60px;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/logo.png">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
 
-<!-- ===================== NAVBAR ===================== -->
 <header>
-    <div class="nav-left">
-        <!--  LOGO IMAGE -->
-          
-        <img src="assets/images/logo.png" alt="Blood Donation Logo">
-        <div class="brand">BLOOD <span style="color:black;">DONATION</span></div>
-
-       
-    </div>
-<div>
-    <nav>
-            <!-- CONNECTED TO HOME PAGE -->
-            <a href="index.html">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Blood Donation Logo">BLOOD<span style="color:black;">DONATION</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="hospital-request.html">Requests</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" id="navactive">Contact Us</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-primary">Donate Now</button>
+            </div>
         </nav>
-
-</div>
-    
-
+    </div>
 </header>
 
-<!-- ===================== CONTACT CONTENT ===================== -->
-<section class="contact-section">
-    <h1>CONTACT US</h1>
+<main>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <div class="card">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle" style="margin-bottom: 2rem;">
+                        Whether you want to become a donor, host a drive, or have questions about eligibility, our team is here to support you.
+                    </p>
+                    
+                    <div class="contact-info-list">
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>24/7 Donor Helpline</h4>
+                                <p>+237 6 219 482 93</p>
+                            </div>
+                        </div>
 
-    <p>
-        We’re here to help, answer your questions, and guide you through the blood donation process.
-        Whether you want to donate, organize a donation drive, or simply learn more,
-        feel free to reach out to us anytime.
-    </p>
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Support</h4>
+                                <p>figriatous@gmail.com</p>
+                            </div>
+                        </div>
 
-    <!-- SOCIAL MEDIA ICONS -->
-    <div class="social-icons">
-        <a href="#"><img src="assets/images/icons.png" alt="Facebook"></a>
-        
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Main Headquarters</h4>
+                                <p>Yaounde Cameroon<br></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title">Send a Message</h2>
+                    <p class="section-subtitle" style="margin-bottom: 2rem;">
+                        Fill out the form below regarding specific inquiries or partnership opportunities.
+                    </p>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Topic</label>
+                            <select class="form-control">
+                                <option>General Inquiry</option>
+                                <option>Donor Eligibility</option>
+                                <option>Host a Blood Drive</option>
+                                <option>Medical Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" placeholder="How can we help you today?"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Common Questions</h2>
+            <p class="section-subtitle">Before you reach out, you might find your answer in our frequently asked questions about the donation process.</p>
+
+            <div class="accordion">
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <span>Who is eligible to donate blood?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Generally, donors must be at least 17 years old, weigh at least 110 lbs, and be in good health. Specific requirements may vary by state and donation type.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How long does the donation process take?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>The entire process usually takes about an hour. The actual blood draw takes only about 8-10 minutes. The rest of the time is for registration, health history, and post-donation snacks.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I donate if I have a tattoo?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>In most states, if your tattoo was applied by a state-regulated entity using sterile needles and non-reused ink, you can donate immediately. Otherwise, there may be a 3-month wait.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How do I organize a blood drive?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Hosting a drive is simple! Fill out our "Host a Drive" form, and a coordinator will help you secure a location, date, and recruit donors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="Blood Donation Logo">BLOOD<span style="color:black;">DONATION</span>
+                </a>
+                <p>Connecting donors with those in need. Every drop counts in our mission to save lives across the globe.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">Volunteers</a></li>
+                    <li><a href="#">Blog News</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Donor Eligibility</a></li>
+                    <li><a href="#">COVID-19 Updates</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-mini">
+                    <li><i class="fa-solid fa-phone"></i> +237 6 219 482 93</li>
+                    <li><i class="fa-solid fa-envelope"></i> figriatous@gmail.com</li>
+                    <li><i class="fa-solid fa-map-pin"></i> Yaounde Cameroon</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2024 LifeFlow Connect. All rights reserved.</span>
+            <div class="social-icons" style="margin-top:0;">
+                <a href="#" style="border:none;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="border:none;"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" style="border:none;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
     </div>
-</section>
+</footer>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
