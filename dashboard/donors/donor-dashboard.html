@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Donor Dashboard | LifeFlow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f6fa;
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:230px;
+    height:100vh;
+    background:#ffffff;
+    padding:20px;
+    border-right:1px solid #ddd;
+}
+
+.sidebar h2{
+    color:#b30000;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    color:#333;
+    text-decoration:none;
+    margin-bottom:10px;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#ffe6e6;
+    color:#b30000;
+}
+
+/* MAIN CONTENT */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+.header h1{
+    color:#333;
+}
+
+.header p{
+    color:#777;
+    margin-top:5px;
+}
+
+/* GRID */
+.content{
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    gap:25px;
+    margin-top:30px;
+}
+
+/* PROFILE CARD */
+.profile{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+}
+
+.profile img{
+    width:70px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+
+.profile h3{
+    margin-bottom:10px;
+}
+
+.profile p{
+    font-size:14px;
+    color:#555;
+    margin:5px 0;
+}
+
+/* TOGGLE */
+.toggle{
+    margin-top:20px;
+}
+
+.toggle label{
+    font-size:14px;
+}
+
+.toggle input{
+    margin-right:10px;
+}
+
+/* REQUESTS */
+.requests{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+}
+
+.requests h2{
+    margin-bottom:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.card{
+    border:1px solid #eee;
+    padding:15px;
+    border-radius:12px;
+}
+
+.card h4{
+    margin-bottom:5px;
+}
+
+.urgency{
+    display:inline-block;
+    background:#ffcccc;
+    color:#b30000;
+    font-size:12px;
+    padding:3px 10px;
+    border-radius:20px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:#555;
+    margin:5px 0;
+}
+
+.card button{
+    width:100%;
+    padding:10px;
+    background:#b30000;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.card button:hover{
+    background:#ff3333;
+}
+
+footer{
+    margin-top:30px;
+    text-align:center;
+    color:#777;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>BloodDonation</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">My Donations</a>
+    <a href="#">Public Requests</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <h1>Donor Dashboard</h1>
+        <p>Welcome back, Amina Kassim. Here’s your overview.</p>
+    </div>
+
+    <div class="content">
+
+        <!-- PROFILE -->
+        <div class="profile">
+            <img src="https://i.pravatar.cc/150" alt="Profile">
+            <h3>Amina Kassim</h3>
+
+            <p>🩸 Blood Type: <strong>O+</strong></p>
+            <p>📍 Location: Nairobi</p>
+            <p>📅 Last Donation: Oct 15, 2023</p>
+
+            <div class="toggle">
+                <label>
+                    <input type="checkbox" id="available" checked>
+                    Yes, I am available to donate
+                </label>
+            </div>
+        </div>
+
+        <!-- REQUESTS -->
+        <div class="requests">
+            <h2>Urgent Blood Requests</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <span class="urgency">High Urgency</span>
+                    <h4>Kenyatta National Hospital</h4>
+                    <p>Required: A+</p>
+                    <p>Location: Nairobi</p>
+                    <button onclick="donate()">Donate Now</button>
+                </div>
+
+                <div class="card">
+                    <span class="urgency">Medium Urgency</span>
+                    <h4>Aga Khan Hospital</h4>
+                    <p>Required: O+</p>
+                    <p>Location: Mombasa</p>
+                    <button onclick="donate()">Donate Now</button>
+                </div>
+
+                <div class="card">
+                    <span class="urgency">High Urgency</span>
+                    <h4>Karen Hospital</h4>
+                    <p>Required: B+</p>
+                    <p>Location: Nairobi</p>
+                    <button onclick="donate()">Donate Now</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 BloodDonation. All rights reserved.
+    </footer>
+
+</div>
+
+<script>
+function donate(){
+    alert("Thank you for your willingness to donate! The hospital will contact you.");
+}
+</script>
+
+</body>
+</html>
