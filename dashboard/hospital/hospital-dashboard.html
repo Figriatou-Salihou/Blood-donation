@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hospital Dashboard | LifeFlow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f6fa;
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:230px;
+    height:100vh;
+    background:#ffffff;
+    padding:20px;
+    border-right:1px solid #ddd;
+}
+
+.sidebar h2{
+    color:#b30000;
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    color:#333;
+    text-decoration:none;
+    margin-bottom:10px;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#ffe6e6;
+    color:#b30000;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h1{
+    color:#333;
+}
+
+.post-btn{
+    background:#b30000;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.post-btn:hover{
+    background:#ff3333;
+}
+
+/* PROFILE */
+.profile{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.profile p{
+    color:#555;
+    font-size:14px;
+}
+
+/* TABLE */
+.table-box{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    margin-top:25px;
+}
+
+.table-box h2{
+    margin-bottom:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    padding:12px;
+    text-align:left;
+    font-size:14px;
+}
+
+th{
+    background:#f2f2f2;
+}
+
+tr:not(:last-child){
+    border-bottom:1px solid #eee;
+}
+
+.badge{
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    color:white;
+}
+
+.high{ background:#e74c3c; }
+.medium{ background:#f39c12; }
+.low{ background:#27ae60; }
+
+.action-btn{
+    padding:6px 12px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:12px;
+    background:#b30000;
+    color:white;
+}
+
+.action-btn:hover{
+    background:#ff3333;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    color:#777;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>BloodDonation</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Manage Requests</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <h1>Hospital Dashboard</h1>
+        <button class="post-btn" onclick="postRequest()">Post Blood Request</button>
+    </div>
+
+    <div class="profile">
+        <p>📍 123 Health Ave, Metropolis, USA</p>
+        <p>✏️ Edit Profile</p>
+    </div>
+
+    <div class="table-box">
+        <h2>Current Blood Requests</h2>
+
+        <table>
+            <tr>
+                <th>Blood Type</th>
+                <th>Quantity</th>
+                <th>Urgency</th>
+                <th>Deadline</th>
+                <th>Responses</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>O+</td>
+                <td>3 Units</td>
+                <td><span class="badge high">High</span></td>
+                <td>2024-07-25</td>
+                <td>2 Donors Pledged</td>
+                <td><button class="action-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>A+</td>
+                <td>1 Unit</td>
+                <td><span class="badge medium">Medium</span></td>
+                <td>2024-07-28</td>
+                <td>0 Donors</td>
+                <td><button class="action-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>AB+</td>
+                <td>5 Units</td>
+                <td><span class="badge low">Low</span></td>
+                <td>2024-08-01</td>
+                <td>5 Donors</td>
+                <td><button class="action-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>B+</td>
+                <td>2 Units</td>
+                <td><span class="badge high">High</span></td>
+                <td>2024-07-26</td>
+                <td>1 Donor</td>
+                <td><button class="action-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>O-</td>
+                <td>4 Units</td>
+                <td><span class="badge medium">Medium</span></td>
+                <td>2024-07-30</td>
+                <td>0 Donors</td>
+                <td><button class="action-btn">View</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        © 2025 BloodDonation. All rights reserved.
+    </footer>
+
+</div>
+
+<script>
+function postRequest(){
+    alert("Redirecting to blood request form...");
+}
+</script>
+
+</body>
+</html>
